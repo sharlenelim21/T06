@@ -9,8 +9,8 @@ const innerHeight = height - margin.top - margin.bottom;
 let innerChartS;
 
 // Tooltip dimensions
-const tooltipWidth = 65;
-const tooltipHeight = 32;
+const tooltipWidth = 180;
+const tooltipHeight = 70;
 
 // Create a bin generator using d3.bin
 const binGenerator = d3.bin()
