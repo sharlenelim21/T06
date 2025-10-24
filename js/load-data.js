@@ -2,7 +2,7 @@
 d3.csv("data/Ex6_TVdata.csv", d => ({
     brand: d.brand,
     model: d.model,
-    screenSize: +d.screenSize,  // Convert screenSize to a number (need to be string if used for filtering)
+    screenSize: +d.screenSize,  // Convert screenSize to a number
     screenTech: d.screenTech,
     energyConsumption: +d.energyConsumption,  // Convert energyConsumption to a number
     star: +d.star  // Convert star to a number
@@ -16,7 +16,10 @@ d3.csv("data/Ex6_TVdata.csv", d => ({
     
     // Call functions after data is loaded
     drawHistogram(data);
+    drawScatterplot(data);
     populateFilters(data);
+    createTooltip(data);
+    handleMouseEvents();
     
 }).catch(error => {
     console.error("Error loading the CSV file:", error);

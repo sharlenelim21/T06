@@ -14,17 +14,25 @@
 
     <main>
         <h2>Energy Consumption for different TV screen types and sizes</h2>
-        <p>Most TVs on sale in Australia are LED and they vary considerably in energy consumption.</p>
+        <p>TVs vary considerably in energy consumption.</p>
 
+        <!-- Filter buttons for screen technology -->
         <div id="filters_screen"></div>
 
+        <!-- Histogram container -->
         <div class="responsive-svg-container">
             <svg id="histogram"></svg>
         </div>
 
-        <p>Only TVs with energy consumption less than 1,800 kWh/year have been included.</p>
+        <p>TVs with same star rating can have very different energy consumption. It all depends on screen size and technology type.</p>
 
+        <!-- Filter buttons for screen size -->
         <div id="filters_size"></div>
+
+        <!-- Scatterplot container -->
+        <div id="scatterplot" class="responsive-svg-container"></div>
+
+        <p>Only TVs with energy consumption less than 1,800 kWh/year have been included.</p>
 
         <div>
             <h3>Data source</h3>
@@ -34,13 +42,17 @@
     </main>
 
     <footer>
-        <p>© 2025 Sharlene Lim Khai Xing;Assisted by ClaudeAI</p>
+        <p>© 2025 Sharlene Lim Khai Xing; Assisted by ClaudeAI</p>
     </footer>
 
+    <!-- D3.js library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Custom JavaScript files in correct loading order -->
     <script src="js/shared-constants.js"></script>
     <script src="js/load-data.js"></script>
     <script src="js/histogram.js"></script>
+    <script src="js/scatterplot.js"></script>
     <script src="js/interactions.js"></script>
 </body>
 </html>
